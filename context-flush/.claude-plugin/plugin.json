@@ -10,5 +10,8 @@
       "default": 300000
     }
   },
-  "types": "./types/index.d.ts"
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "dtinth"
+  }
 }

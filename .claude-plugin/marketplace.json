@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "dtinth-mods",
+  "description": "Claude Code mods by dtinth.",
+  "owner": { "name": "dtinth" },
+  "plugins": [
+    {
+      "name": "context-flush",
+      "source": "./context-flush",
+      "description": "Shows context size and session cost above the prompt. At a token threshold, asks the agent to flush notes, then compacts when it says it is ready.",
+      "version": "0.1.0"
+    }
+  ]
+}
