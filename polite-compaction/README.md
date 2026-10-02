@@ -1,4 +1,4 @@
-# context-flush
+# polite-compaction
 
 A Claude Code mod. It does two jobs:
 
@@ -80,11 +80,11 @@ Code, run:
 
 ```
 /plugin marketplace add <GitHub owner>/<repo>
-/plugin install context-flush@dtinth-mods
+/plugin install polite-compaction@dtinth-mods
 ```
 
 From a shell, use `claude plugin marketplace add <source>` and
-`claude plugin install context-flush@dtinth-mods`. The source can also be a
+`claude plugin install polite-compaction@dtinth-mods`. The source can also be a
 local path, for example `/config/mods`.
 
 ## Develop

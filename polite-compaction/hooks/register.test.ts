@@ -56,7 +56,7 @@ test('asks once at the threshold, compacts when the agent says ready', async ($,
   await clock.advance(1000)
   expect(compactions).toBe(1)
   const ui = await $.ui.mount({
-    plugin: 'context-flush',
+    plugin: 'polite-compaction',
     surface: 'terminal',
     component: 'AbovePrompt',
     props: { hasSurvey: false },

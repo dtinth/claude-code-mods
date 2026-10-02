@@ -1,7 +1,7 @@
 import { atom, read, update } from 'claude-code'
 import type { Register } from 'claude-code'
 
-const line = atom({ plugin: 'context-flush', key: 'line' } as const, '')
+const line = atom({ plugin: 'polite-compaction', key: 'line' } as const, '')
 
 const READY = '<ready-for-compaction/>'
 const RETRIES = 20

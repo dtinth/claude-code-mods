@@ -1,6 +1,6 @@
 {
-  "name": "context-flush",
-  "version": "0.1.0",
+  "name": "polite-compaction",
+  "version": "0.2.0",
   "description": "Shows context tokens and session cost in a gray line above the prompt. At a token threshold, asks the agent to flush notes, then compacts when it says it is ready.",
   "userConfig": {
     "thresholdTokens": {
