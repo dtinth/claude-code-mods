@@ -1,0 +1,14 @@
+{
+  "name": "context-flush",
+  "version": "0.1.0",
+  "description": "Shows context tokens and session cost in a gray line above the prompt. At a token threshold, asks the agent to flush notes, then compacts when it says it is ready.",
+  "userConfig": {
+    "thresholdTokens": {
+      "type": "number",
+      "title": "Flush threshold (tokens)",
+      "description": "When the context reaches this size, ask the agent to flush before compaction.",
+      "default": 300000
+    }
+  },
+  "types": "./types/index.d.ts"
+}
