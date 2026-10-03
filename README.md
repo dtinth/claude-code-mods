@@ -27,6 +27,7 @@ claude plugin install polite-compaction@dtinth-mods
 
 To get new versions later, run `claude plugin marketplace update dtinth-mods`.
 
-## Discussion
+## Development
 
-Talk about these mods in [issue #1](https://github.com/dtinth/claude-code-mods/issues/1).
+These mods grow in public, in [issue #1](https://github.com/dtinth/claude-code-mods/issues/1).
+The discussion and the design notes are there.
