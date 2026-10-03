@@ -1,5 +1,7 @@
 # polite-compaction
 
+Part of [claude-code-mods](https://github.com/dtinth/claude-code-mods).
+
 A Claude Code mod. It does two jobs:
 
 1. It shows the context size and the session cost in a gray line above the
@@ -34,6 +36,18 @@ ctx 123k / 1000k (12%) · $4.56
 3. The agent saves what it needs. The prompt does not name a place.
 4. When a reply ends with `<ready-for-compaction/>`, the mod runs a normal
    compaction (no custom instructions).
+
+Scope:
+
+- The mod works on the main session only. It does not measure or ask
+  sub-agents. Their context is separate, and they do not get the flush prompt.
+- The mod acts only between turns. A turn is one run of the model, from a
+  prompt to the final answer, and it can include many tool calls. The mod
+  reads the context size when the turn ends. It does not inject the prompt in
+  the middle of a turn. The prompt goes in as a new turn, after the session is
+  idle.
+- A long turn can pass the threshold, and also the auto-compact point, before
+  the mod gets a chance to ask. Keep the threshold well below auto-compact.
 
 Rules:
 
@@ -79,13 +93,13 @@ This repository is a Claude Code marketplace named `dtinth-mods`. In Claude
 Code, run:
 
 ```
-/plugin marketplace add <GitHub owner>/<repo>
+/plugin marketplace add dtinth/claude-code-mods
 /plugin install polite-compaction@dtinth-mods
 ```
 
-From a shell, use `claude plugin marketplace add <source>` and
+From a shell, use `claude plugin marketplace add dtinth/claude-code-mods` and
 `claude plugin install polite-compaction@dtinth-mods`. The source can also be a
-local path, for example `/config/mods`.
+local path to a clone of the [repository](https://github.com/dtinth/claude-code-mods).
 
 ## Develop
 

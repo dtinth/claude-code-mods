@@ -2,13 +2,16 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "dtinth-mods",
   "description": "Claude Code mods by dtinth.",
-  "owner": { "name": "dtinth" },
+  "owner": {
+    "name": "dtinth"
+  },
   "plugins": [
     {
       "name": "polite-compaction",
       "source": "./polite-compaction",
       "description": "Shows context size and session cost above the prompt. At a token threshold, asks the agent to flush notes, then compacts when it says it is ready.",
-      "version": "0.2.0"
+      "version": "0.2.1",
+      "homepage": "https://github.com/dtinth/claude-code-mods/tree/main/polite-compaction"
     }
   ]
 }
